@@ -11,6 +11,22 @@ The idea of the camera course is to build a collision detection system - that's 
 
 See the classroom instruction and code comments for more details on each of these parts. Once you are finished with this project, the keypoint matching part will be set up and you can proceed to the next lesson, where the focus is on integrating Lidar points and on object detection using deep-learning. 
 
+### Report on Detector/Descriptors
+For every descriptor but SIFT, the Hamming distance was used.
+AKAZE descriptors only works with AKAZE detectors
+ORB sometimes produces OOM errors
+
+![](keypoints.png)
+![](all.png)
+![](time.png)
+
+TOP3 COMBINATION	|AVERAGE TIME (ms)	|AVERAGE MATCH|
+|---|---|---|
+FAST - ORB	|28.9|	278|
+FAST - BRIEF|	29.3	|285|
+ORB - BRIEF|	10	|54|
+
+
 ## Dependencies for Running Locally
 * cmake >= 2.8
   * All OSes: [click here for installation instructions](https://cmake.org/install/)
